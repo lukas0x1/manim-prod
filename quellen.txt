@@ -1,0 +1,6 @@
+https://www.lernhelfer.de/schuelerlexikon/mathematik-abitur/artikel/produktregel-der-differenzialrechnung
+https://de.wikipedia.org/wiki/Produktregel
+
+https://github.com/3b1b/manim
+https://www.latex-project.org/
+https://www.manim.community/

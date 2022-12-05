@@ -2,7 +2,7 @@ from manimlib import *
 
 #mein kopf brennt
 
-class Test(Scene):
+class Produkt(Scene):
     def construct(self):
 
         greeting = Tex(r'''Die \ Produktregel''', font_size=86)
@@ -293,3 +293,17 @@ class Test(Scene):
                   FadeOut(text6, DOWN), FadeOut(text7, DOWN), FadeOut(text8, DOWN), FadeOut(text9, DOWN),
                   FadeOut(text10, DOWN), FadeOut(title, UP))
 
+        title = Tex(r"VI. \ Quellen", font_size=86).set_y(1)
+        self.play(Write(title))
+
+        quellen = Tex(r"Quellen \ befinden \ sich \ in \ der \ zugehörigen \ quellen.txt \ datei \\ 'https://github.com/lukas0x1/manim-prod/'").set_y(-1)
+        self.play(Write(quellen))
+        self.wait(self.on_key_press(0, 0))
+        self.play(FadeOut(quellen, DOWN), FadeOut(title, UP))
+
+        title = Tex(r"VII. \ Das \ wars!", font_size=86).set_y(1)
+        ade = Tex(r"Danke \ fuer \ eure \ Aufmerksamkeit").set_y(-1)
+        self.play(Write(title))
+        self.play(Write(ade))
+        self.wait(self.on_key_press(0, 0))
+        exit()
