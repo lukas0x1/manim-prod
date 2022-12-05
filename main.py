@@ -182,8 +182,7 @@ class Test(Scene):
 
 
 
-
-
+        #should probably use loops :]
 
         aa = Tex(r"f'(x) = ").set_x(2, ORIGIN).set_y(3.5, ORIGIN) #\frac{3}{2}x^2 + 3x-2
         ab = Tex(r"f'(x) = ").next_to(b, RIGHT).align_to(aa, LEFT)
