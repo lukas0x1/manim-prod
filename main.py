@@ -77,7 +77,23 @@ class Produkt(Scene):
         self.play(Transform(text4, textMov2))
 
         self.wait(self.on_key_press(0, 0))
-        self.play(FadeOut(text, DOWN), FadeOut(text2, DOWN), FadeOut(text3, DOWN), FadeOut(text4, DOWN), FadeOut(title, UP))
+
+        text5 = Tex(r"5.  Differenzen/Differenzialquotien", font_size=54).set_y(3.5, ORIGIN).set_x(2)
+        self.play(Write(text5))
+        self.wait(self.on_key_press(0, 0))
+        formel = Tex(r"m = \frac{f(x + h) - f(x)}{h}", color=RED).next_to(text5, DOWN).align_to(text5, LEFT)
+        self.play(Write(formel))
+        self.wait(self.on_key_press(0, 0))
+        formelres = Tex(r"f'(x)= \displaystyle \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}", color=BLUE).next_to(formel, DOWN).align_to(formel, LEFT)
+        self.play(Write(formelres))
+        self.wait(self.on_key_press(0, 0))
+        self.play(FadeOut(formel, shift=DOWN), FadeOut(formelres, shift=DOWN))
+        textMov2 = Tex(r"5.  Differenzen/Differenzialquotien").next_to(text4, DOWN).align_to(text4, LEFT)
+        self.play(Transform(text5, textMov2))
+
+        self.wait(self.on_key_press(0, 0))
+
+        self.play(FadeOut(text, DOWN), FadeOut(text2, DOWN), FadeOut(text3, DOWN), FadeOut(text4, DOWN), FadeOut(text5, DOWN), FadeOut(title, UP))
 
         title = Tex(r"II. \ Produktregel", font_size=86)
         upperCorner = Tex(r"II.").move_to([-6.5, 3.5, 0])
@@ -210,14 +226,14 @@ class Produkt(Scene):
         self.play(Write(ah))
 
 
-        ra = Tex(r"3x^2 - 2x").next_to(aa, RIGHT)
-        rb = Tex(r"5x^4 + x^3 + 6x + \frac{3}{4}").next_to(ab, RIGHT)
-        rc = Tex(r"3x^2").next_to(ac, RIGHT)
-        rd = Tex(r"3x^2 + 6").next_to(ad, RIGHT)
-        re = Tex(r"cos(x) - x * sin(x)").next_to(ae, RIGHT)
-        rf = Tex(r"16x^3 + 8").next_to(af, RIGHT)
-        rg = Tex(r"\frac{3}{2}x^2 + 3x-2").next_to(ag, RIGHT)
-        rh = Tex(r"\frac{x * cos(x) - sin(x)}{x^2}").next_to(ah, RIGHT)
+        ra = Tex(r"3x^2 - 2x", color=GREEN).next_to(aa, RIGHT)
+        rb = Tex(r"5x^4 + x^3 + 6x + \frac{3}{4}", color=GREEN).next_to(ab, RIGHT)
+        rc = Tex(r"3x^2", color=GREEN).next_to(ac, RIGHT)
+        rd = Tex(r"3x^2 + 6", color=GREEN).next_to(ad, RIGHT)
+        re = Tex(r"cos(x) - x * sin(x)", color=GREEN).next_to(ae, RIGHT)
+        rf = Tex(r"16x^3 + 8", color=GREEN).next_to(af, RIGHT)
+        rg = Tex(r"\frac{3}{2}x^2 + 3x-2", color=GREEN).next_to(ag, RIGHT)
+        rh = Tex(r"\frac{x * cos(x) - sin(x)}{x^2}", color=GREEN).next_to(ah, RIGHT)
 
         self.wait(self.on_key_press(0, 0))
         self.play(Write(ra))
@@ -255,7 +271,7 @@ class Produkt(Scene):
         self.play(FadeOut(text, DOWN))
 
         text2 = Tex(r"m = \frac{y2-y1}{x2-x1}").set_y(3.2, ORIGIN).set_x(-4, ORIGIN)
-        text3 = Tex(r"\displaystyle \lim_{x \to 0} \frac{u(x + h) * v(x + h) - u(x) * v(x)}{h}").set_y(3.2,
+        text3 = Tex(r"\displaystyle \lim_{h \to 0} \frac{u(x + h) * v(x + h) - u(x) * v(x)}{h}").set_y(3.2,
                                                                                                        ORIGIN).set_x(2,
                                                                                                                      ORIGIN)
         text4 = Tex(
